@@ -1,13 +1,766 @@
+html {
+    scroll-behavior: smooth;
+
+}
 body {
     background-color: #c9c9c9;
-    padding-top: 0;
+    padding-top: 100px;
     margin: 0;
     display: flex;
+    flex-direction: column;
+    text-align: center;
     justify-content: center;
     font-family: "inter", sans-serif;
-    font-weight: 350;
+    font-weight: 500;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 2;
+    top: 0;
+    background-color: #c9c9c945;
+    backdrop-filter: blur(7px);
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header img {
+    width: 120px;
+    height: 120px;
+    margin: 0;
+}
+.nav {
+    width: 70%;
+    padding-right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav a {
+    text-decoration: none;    
+    font-size: 35px;
+    color: #000000;
+}
+.nav a:hover {
+    color: #724adb;
+}
+.wrapper {
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 200px);
+    margin: 30px;
+    margin-top: 130px;
+}
+.suchsystem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    width: 100%;
+    padding: 0;
+}
+.suchsystem form {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.suchsystem form * {
+    border-radius: 5px;
+    border: none;
+    height: 100%;
+    font-size: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.bookimage {
+    width: 244px;
+    height: 331px;
+    border: solid 1px;
+    border-radius: 6px;
+    padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 2px 5px 10px;
+}
+
+.book {
+    width: 244px;
+    margin: 20px;
+}
+
+.nav img {
+    height: 50px; 
+    width: 50px; 
+    margin-right: 50px; 
+    margin-left: -100px;
+    margin-top: -10px;
+}
+
+.socials {
+    height: 100%;
+    width: 100px;
+    position: fixed;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    z-index: 2;
+    margin-top: -50%;
+}
+.socials :nth-child(1) {
+    width: 24px;
+    height: 24px;
+    margin-top: 10px;
+}
+.socials :nth-child(2) {
+    width: 270px;
+    height: 27px;
+    margin-top: 10px;
+}
+.socials :nth-child(3) {
+    width: 32px;
+    height: 32px;
+    margin-top: 10px;
+}
+.line {
+    height: calc(50% - 20px);
+    background-image: linear-gradient(#8470BE,#6a3baa);
+    width: 5px;
+    margin-top: 10px;
+}
+.footer {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: linear-gradient(#6a3baa,#42226f);
+}
+/* Über uns */
+.title {
+    font-size:5rem;
+    color: #000000;
+    margin: 0;
+    margin-top: -10%;
+    text-align: center;
+    font-family: "Archivo Black";
+}
+
+.subtitle {
+    font-size: 2rem;
+    color: #000000;
+    margin: 0;
+    margin-top: -1%;
+    text-align: center;
+    font-family: "Archivo Black";
+}
+
+.abttit {
+    font-size: 35px;
+    color: black;
+    margin: 0;
+    padding-right: 20%;
+    text-align: center;
+    font-family: "Archivo Black";
+}
+
+.abttxt {
+    font-size: 20px;
+    color: #000000;
+    margin: 0;
+    padding-right: 20%;
+    text-align: center;
+    font-family: "Archivo Black";
+}
+/*Background Animation*/
+.backanim::before {
+    position: absolute;
+    content: "";
+    left: 55%;
+    top: 25%;
+    width: 57vh;
+    height: 57vh;
+    background: rgba(115, 72, 238, 0.66);
+    border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+    will-change: border-radius, transform, opacity;
+    animation: sliderShape 8s linear infinite;
+    display: block;
+    z-index: -2;
+    -webkit-animation: sliderShape 8s linear infinite;
+    filter: drop-shadow(-35px 10px 30px #7348EE);
+  }
+  @keyframes sliderShape{
+    0%,100%{
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+      transform: translate3d(0,0,0) rotateZ(0.01deg);
+    }
+    34%{
+        border-radius: 70% 30% 46% 54% / 30% 29% 71% 70%;
+      transform:  translate3d(0,5px,0) rotateZ(0.01deg);
+    }
+    50%{
+      transform: translate3d(0,0,0) rotateZ(0.01deg);
+    }
+    67%{
+      border-radius: 100% 60% 60% 100% / 100% 100% 60% 60% ;
+      transform: translate3d(0,-3px,0) rotateZ(0.01deg);
+    }
+  }
+
+
+
+/* Admin Login */
+.adminprofile {
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-top: 2.5%;
+    
+    
+}
+
+.usernameinput {
+    width: 65%; 
+    height: 50px;
+    border-radius: 2px;
+    border: none;
+    font-size: 20px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: 10%;
+    position: relative; 
+    z-index: 1; 
+}
+
+.usernametxt {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    font-family: "Archivo Black";
+    z-index: 2;
+    position: relative;
+    padding-right: 40%;
+    margin-top: 60px;
+    padding-top: 60px;
+    transform: none;
+    left: 0; 
+}
+
+.passwordinput {
+    width: 65%;
+    height: 50px;
+    border-radius: 2px;
+    border: none;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 10%;
+}
+
+.passwordtxt {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0;
+    padding-right: 10%;
+    padding-top: 80%;
+    text-align: center;
+    font-family: "Archivo Black";
+    margin-left: 10%;
+}
+
+.submitadmin {
+    width: 50%;
+    height: 50px;
+    border-radius: 2px;
+    border: none;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 17.5%;
+    background-color: #6a3baa;
+    color: white;
+}
+
+.adminbox {
+    width: 25%;
+    height: 70vh;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 6px;
+    border: none;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 40%;
+    background-color: grey;
+    z-index: 1;
+}
+
+.ueberunstit {
+    font-size: 3rem;
+    color: rgb(61, 61, 61);
+    margin: 0;
+    padding-top: 7%;
+    text-align: center;
+    font-family: "Archivo Black";
+}
+/* Aktuelle Bücher */
+
+.wrappermain, .recent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100%;
+}
+
+.wrappermain {
+    text-align: center; 
+}
+
+.recent {
+    background-color: #d9d9d9;
+}
+
+.arrow {
+    width: 50px;
+    height: 50px;
+    margin-top: 30px;
+}
+
+.akttxt {
+    font-size:2rem;
+    color: rgb(61, 61, 61);
+    text-align: center;
+    font-family: "Archivo Black";
+}
+
+.imgdetails {
+    padding-left: 5%;
+    margin-top: -450px;
+    width: 20%;
+    height: 70%;
+}
+
+.buttondet {
+    width: 50px;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #6a3baa;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-top: 2px;
+}
+
+.buttondet:hover {
+    background-color: #42226f;
+}
+
+.header img {
+    width: 120px;
+    height: 120px;
+    margin: 0;
+}
+.nav {
+    width: 60%;
+    padding-right:100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav a {
+    text-decoration: none;    
+    font-size: 35px;
+    color: #000000;
+}
+.nav a:hover {
+    color: #724adb;
+}
+.keiAhnig {
+    display: flex;
     flex-direction: column;
 }
+.wrapperAussen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.wrapper {
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 200px);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+    margin-right: 30px;
+    margin-top: 130px;
+}
+.suchsystem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    width: 100%;
+    padding: 0;
+}
+.suchsystem form {
+    height: 100%;
+    width: 350px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.suchsystem form * {
+    border-radius: 5px;
+    border: none;
+    height: 100%;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px;
+}
+#FilterDiv {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+.inFilterDiv {
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 450px;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+#FilterDiv .inInFilterDiv {
+    align-items: start;
+    justify-content: start;
+    margin: 0;
+    padding-bottom: 20px;
+    width: 200;
+    height: 200;
+}
+.inInFilterDiv * {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    font-size: 23px;
+    font-weight: 300;
+}
+.inInFilterDiv h3 {
+    font-size: 45px;
+    font-weight: 300;
+}
+.toggleFilter {
+    border-radius: 5px;
+    border: none;
+    height: 100%;
+    width: 200px;
+    font-size: 20px;
+    z-index: 8;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px;
+}
+.filterButton{
+    background-color: #ffffff;
+    padding: 50px;
+}
+#SortierDiv {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+.inSortierDiv {
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 520px;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    margin-top: 150px;
+}
+
+#FilterDiv .inInSortierDiv {
+    align-items: start;
+    justify-content: start;
+    margin: 0;
+    padding-bottom: 20px;
+    width: 200;
+    height: 200;
+}
+.inInSortierDiv * {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    font-size: 23px;
+    font-weight: 300;
+}
+.inInSortierDiv h3 {
+    font-size: 45px;
+    font-weight: 300;
+}
+.suchFilterFormular {
+    z-index: 7;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .keiAhnig {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .header img {
+    height: 50px;
+  }
+  
+  .nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .socials {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .socials img {
+    margin: 0 5px;
+    height: 30px;
+  }
+  
+  .line {
+    width: 1px;
+    height: 30px;
+    background-color: #333;
+    margin: 0 10px;
+  }
+  
+  .wrapper {
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .suchsystem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .toggleFilter {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .suchFilterFormular {
+    display: flex;
+    align-items: center;
+  }
+  
+  .suchFilterFormular input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .submit {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #FilterDiv, #SortierDiv {
+    display: none;
+    margin-top: 20px;
+  }
+  
+  .inFilterDiv, .SortierDiv {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .books {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .book-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f1f1;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 4px;
+  }
+  
+  .book-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .book-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .book-left img {
+    margin-right: 20px;
+  }
+  
+  .book-title {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .book-author {
+    margin: 5px 0 0 0;
+    color: #555;
+  }
+  
+  .book-right {
+    text-align: right;
+  }
+  
+  .book-year, .book-condition {
+    margin: 0;
+  }
+  
+  .book-actions {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .edit-button, .delete-button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .edit-button {
+    background-color: #ffc107;
+    color: #fff;
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+    color: #fff;
+  }  
+
+.footer {
+    width: 100%;
+    height: 150px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: linear-gradient(#6a3baa,#42226f);
+    z-index: 15;
+    color: #ffffff;
+}
+.keiAhnig {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.dettxt {
+    width: 700px;
+    height: 90px;
+    padding-left: 30%;
+    padding-bottom: 15px;
+}
+
+.book-details {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.book-details h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.book-details .details p {
+    margin: 5px 0;
+}
+
+.book-details .details p strong {
+    margin-right: 5px;
+}
+
+.imgdetails {
+    width: 300px;
+    height: 400px;
+    margin-right: 20px;
+    margin-top: -30px;
+}
+
 .header {
     position: fixed;
     width: 100%;
@@ -308,3 +1061,138 @@ body {
     flex-direction: column;
     padding: 0;
 }
+
+/* Admin Book Layout */
+.booksAdmin {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #e0e0e0;
+  }
+
+  .bookAdmin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    background-color: #d3d3d3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+.bookimageAdmin img{
+    width: 140px;
+    height: 200px;
+    border: solid 1px;
+    border-radius: 6px;
+    
+    box-shadow: rgba(0, 0, 0, 0.35) 2px 5px 10px;
+}
+
+.book h2, .book p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  
+  .buttondelete, .buttonedit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 100px;
+    margin-left: 10px;
+    background-color: #6c63ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .buttondelete:hover, .buttonedit:hover {
+    background-color: #5a54d1;
+  }
+  
+  .buttondelete {
+    background-image: url('Icons/delete.png');
+    padding-right: 20%;
+  }
+  
+  .buttonedit {
+    background-image: url('Icons/edit.png');
+    padding-right: 20%;
+    
+  }
+
+  .BarriereAdmin {
+    clear: both;
+  }
+  
+  /* Buecher Editieren */
+  .UpdateFormDiv {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 17;
+}
+
+.UpdateForm {
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 550px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.UpdateForm input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 36px;
+    width: 300px;
+    border-radius: 2px;
+    border: solid #333333 1.5px;
+    box-sizing: border-box;
+}
+
+.UpdateForm .submitbutton {
+    background-image: linear-gradient(#6a3baa,#42226f);
+    border-radius: 5px;
+    color: #ffffff;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 5px;
+}
+
+.deletereturn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    z-index: 200;
+}
+
+.editform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    height: 100%;
+    z-index: 200;
+}
+  
