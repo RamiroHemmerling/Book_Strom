@@ -1,0 +1,1 @@
+select verfasser from buecher order by verfasser desc
