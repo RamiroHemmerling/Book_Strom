@@ -1,4 +1,5 @@
 # Book Strom - Online Bookcatalog #
+Made by: [Ramiro](https://github.com/RamiroHemmerling)
 Welcome to Book Strom, your go-to online bookstore for a vast collection of books! Whether you're an avid reader or just exploring new literary adventures, our platform offers a user-friendly experience, allowing you to search, sort, and filter books based on your preferences.
 
 ## Features ##
