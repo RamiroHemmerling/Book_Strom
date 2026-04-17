@@ -3,6 +3,7 @@
 Erstellt von: [Ramiro](https://github.com/RamiroHemmerling) & [Severin](https://github.com/SeverinKienberger)
 
 Willkommen bei Book Storm, einem Online-Buchkatalog, der es Benutzern ermöglicht, Bücher nach ihren Präferenzen zu suchen, zu sortieren und zu filtern.
+Das Projekt entstand im Rahmen der Ausbildung an der IMS Basel.
 
 ## Funktionen
 
@@ -21,9 +22,6 @@ Willkommen bei Book Storm, einem Online-Buchkatalog, der es Benutzern ermöglich
 - Bücher mit Details wie Titel, Autor, Genre und Coverbild hinzufügen
 - Bestehende Buchinformationen aktualisieren
 - Bücher aus dem Katalog löschen
-- Benutzerverwaltung
-  - Benutzer hinzufügen
-  - Benutzerrechte anpassen
 
 
 ## Beitrag von Severin Kienberger
